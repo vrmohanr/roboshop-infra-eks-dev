@@ -7,7 +7,7 @@ terraform {
   }
 
     backend "s3" {
-    bucket         = "remote-ram-devops-new"
+    bucket         = "remote-mohan-devops"  # In New AWS account bucket name changed use it here after
     key            = "roboshop-roboshop-eks-tfstate"  # s3 bucket created with this name
     region         = "us-east-1"
     encrypt        = true
