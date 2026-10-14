@@ -1,0 +1,13 @@
+cat > .gitignore <<'EOF'
+# Terraform downloaded providers/modules
+**/.terraform/*
+.terraform/
+
+# State files (local state + backups)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+EOF
