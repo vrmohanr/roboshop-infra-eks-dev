@@ -117,7 +117,7 @@ resource "aws_lb_listener_rule" "app2" {
       values = ["app2-${var.environment}.${var.domain_name}"] # app2-dev.daws90s.shop
     }
   }
-} */
+} 
 
 resource "aws_lb_target_group" "frontend" {
   name     = "${local.common_name}-frontend"
@@ -154,3 +154,4 @@ resource "aws_lb_listener_rule" "frontend" {
     }
   }
 }
+*/
