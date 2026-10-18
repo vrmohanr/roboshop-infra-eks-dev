@@ -38,6 +38,8 @@ module "eks" {
   # EKS Managed Node Group(s)
   eks_managed_node_groups = {
     blue = {
+      create = var.enable_blue
+      kubernetes_version = var.blue_version
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
       ami_type       = "AL2023_x86_64_STANDARD"
       instance_types = ["t3.small","t3.medium","m5.xlarge","m4.xlarge"]
@@ -57,6 +59,7 @@ module "eks" {
         http_put_response_hop_limit = 2
         http_tokens = "required"
       }
+
       labels = {
         nodegroup = "blue"
       }
