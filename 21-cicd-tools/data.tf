@@ -24,7 +24,7 @@ data "aws_ami" "sonarqube" {
 
   filter {
     name   = "name"
-    values = ["SolveDevOps-SonarQube-Server-Ubuntu24.04-*"]
+    values = ["SolveDevOps-SonarQube-Server-Ubuntu26.04-*"]
   }
 
   filter {
